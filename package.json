@@ -1,6 +1,6 @@
 {
   "name": "unity-animator-panels",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Panel uses an Animator's 'panelState' property to control transitions.",
   "main": "index.js",
   "repository": {
@@ -21,16 +21,17 @@
   "scripts": {
     "postinstall": "node scripts/postinstall.js",
     "install:test": "rm -f *.tgz && npm pack && cd test && npm run clean && npm install",
-    "clean": "rm -f *.tgz && cd test && npm run clean"
+    "clean": "rm -f *.tgz && cd test && npm run clean",
+    "sync:test2src": "rsync -rv --include '*/' --include '*.cs' --exclude '*' --prune-empty-dirs test/Assets/Plugins/BeatThat/AnimatorPanels/ ./src/AnimatorPanels/"
   },
   "dependencies": {
     "mkdirp": "^0.5.1",
     "ncp": "^2.0.0",
     "unity-extensions": "github:beatthat/unity-extensions#semver:^0.0.4",
-    "unity-panel-interfaces": "github:beatthat/unity-panel-interfaces#semver:^0.0.2",
-    "unity-state-controllers": "github:beatthat/unity-state-controllers#semver:^0.0.2",
-    "unity-transitions": "github:beatthat/unity-transitions#semver:^0.0.2",
+    "unity-panel-interfaces": "github:beatthat/unity-panel-interfaces#semver:^0.0.3",
+    "unity-state-controllers": "github:beatthat/unity-state-controllers#semver:^0.0.3",
     "unity-transition-interfaces": "github:beatthat/unity-transition-interfaces#semver:^0.0.2",
+    "unity-transitions": "github:beatthat/unity-transitions#semver:^0.0.2",
     "unity-type-utils": "github:beatthat/unity-type-utils#semver:^0.0.4"
   }
 }

@@ -1,5 +1,6 @@
 using UnityEngine;
 using BeatThat.UI;
+using BeatThat;
 using BeatThat.Anim;
 
 namespace BeatThat.UI
@@ -214,10 +215,18 @@ namespace BeatThat.UI
 			override protected void DoUpdateTransition(float time, float deltaTime)
 			{
 				var a = this.animator;
-				if(a == null) {
+				if(a == null || !a.isInitialized) {
 					Cancel();
 					return;
 				}
+
+				#if UNITY_EDITOR
+				if(a.runtimeAnimatorController == null) {
+					Debug.LogWarning("[" + Time.frameCount + "][" + this.owner.Path() + "] Animator has no controller!");
+					Cancel();
+					return;
+				}
+				#endif
 
 				var stateInfo = a.GetCurrentAnimatorStateInfo(this.transitionLayer);
 
