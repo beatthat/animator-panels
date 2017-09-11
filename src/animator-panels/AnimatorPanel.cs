@@ -5,6 +5,12 @@ using BeatThat.Anim;
 
 namespace BeatThat.UI
 {
+	/// <summary>
+	/// Panel that drives an Animator has these expectations for the Animator:
+	/// 
+	/// * has an <c>int</c> 'panelState' param 
+	/// * has 'in' and 'out' target states on layer 0
+	/// </summary>
 	[RequireComponent(typeof(Animator))]
 	public class AnimatorPanel : MonoBehaviour, Panel
 	{
