@@ -1,7 +1,7 @@
 {
   "name": "animator-panels",
   "scope": "beatthat",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Panel uses an Animator's 'panelState' property to control transitions.",
   "main": "index.js",
   "repository": {
