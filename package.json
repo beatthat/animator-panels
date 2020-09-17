@@ -6,7 +6,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/beatthat/panel-interfaces.git"
+    "url": "git+https://github.com/beatthat/animator-panels.git"
   },
   "files": [
     "index.js",
@@ -20,9 +20,9 @@
   "author": "larrykirschner@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/beatthat/panel-interfaces/issues"
+    "url": "https://github.com/beatthat/animator-panels/issues"
   },
-  "homepage": "https://github.com/beatthat/panel-interfaces",
+  "homepage": "https://github.com/beatthat/animator-panels",
   "scripts": {
     "postinstall": "node scripts/postinstall.js",
     "install:test": "rm -f *.tgz && npm pack && cd test && npm run clean && npm install",
@@ -49,7 +49,7 @@
   "dependencies": {
     "mkdirp": "^0.5.1",
     "ncp": "^2.0.0",
-    "panel-interfaces": "github:beatthat/panel-interfaces#semver:^1.0.0",
+    "animator-panels": "github:beatthat/animator-panels#semver:^1.0.0",
     "state-controllers": "github:beatthat/state-controllers#semver:^1.0.0",
     "transition-interfaces": "github:beatthat/transition-interfaces#semver:^1.0.0",
     "transitions": "github:beatthat/transitions#semver:^1.0.0",
